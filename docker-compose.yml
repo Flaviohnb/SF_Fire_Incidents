@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  pyspark:
+    image: "jupyter/all-spark-notebook"
+    container_name: spark
+    volumes:
+      - ./pyspark-data:/home/jovyan
+    ports:
+      - 8888:8888
+    links:
+      - postgres-datawarehouse      
+    networks:
+      - develop_network
+
+  postgres-datawarehouse:
+    image: postgres:13
+    container_name: postgres-datawarehouse
+    environment:
+      POSTGRES_PASSWORD: Postgres123!
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/volume
+    restart: always
+    networks:
+      - develop_network    
+
+networks:
+  develop_network:
+    driver: bridge
