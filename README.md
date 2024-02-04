@@ -1,7 +1,7 @@
-# Sao Francisco California - Fire Incidents
+# San Francisco California - Fire Incidents
 
 Project to analyze data on fires in the San Francisco area of California.
-- Origem: [Fire-Incidents](https://data.sfgov.org/Public-Safety/Fire-Incidents/wr8u-xric/about_data)
+- Source Data: [Fire-Incidents](https://data.sfgov.org/Public-Safety/Fire-Incidents/wr8u-xric/about_data)
 
 ## Installation Instructions 
 

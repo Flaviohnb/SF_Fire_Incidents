@@ -23,7 +23,6 @@ services:
       - "5432:5432"
     volumes:
       - ./postgres-data:/volume
-    restart: always
     networks:
       - develop_network    
 
